@@ -17,12 +17,13 @@ describe Pizza do
 
       expect(pizza.toppings).to eq(toppings)
     end
-    
+
     it 'defaults the toppings to cheese only, if the pizza has no toppings' do
       pizza = Pizza.new
 
       expect(pizza.toppings.size).to eq(1)
       expect(pizza.toppings.first.name).to eq('cheese')
+     
     
     end
   end
