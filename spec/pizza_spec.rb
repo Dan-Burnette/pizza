@@ -44,8 +44,8 @@ describe Pizza do
       ]
       non_veg_pizza = Pizza.new(non_veg_toppings)
 
-      expect(veg_pizza.vegetarian?) to eq(true)
-      expect(non_veg_pizza.vegetarian?) to eq(false)
+      expect(veg_pizza.vegetarian?).to eq(true)
+      expect(non_veg_pizza.vegetarian?).to eq(false)
     end
 
   end
