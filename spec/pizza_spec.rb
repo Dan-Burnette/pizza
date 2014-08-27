@@ -51,6 +51,21 @@ describe Pizza do
 
   end
 
+  describe '.add_topping' do
+
+    it 'takes a Topping and adds it to the @toppings array' do
+      test_pizza = Pizza.new [Topping.new('cheese', vegetarian: true),
+                              Topping.new('pepperoni', vegetarian: false)]
+      starting_ingredients = test_pizza.toppings.size()
+      bacon = Topping.new('bacon', vegetarian: false)
+
+      test_pizza.add_topping(bacon)
+
+      expect(test_pizza.toppings.includes?(bacon)).to eq (true)
+      expect(test_pizza.toppings.size()).to eq(starting_ingredients + 1)
+    end
+  end
+
 end
 
 describe Topping do
