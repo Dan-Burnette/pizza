@@ -61,7 +61,7 @@ describe Pizza do
 
       test_pizza.add_topping(bacon)
 
-      expect(test_pizza.toppings.includes?(bacon)).to eq (true)
+      expect(test_pizza.toppings.include?(bacon)).to eq (true)
       expect(test_pizza.toppings.size()).to eq(starting_ingredients + 1)
     end
   end
